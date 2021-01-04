@@ -45,7 +45,7 @@ const Homepage = () => {
             My assignments are getting done in time.`}
             />
             <Testimonials 
-            name={`JOHN HILL`}
+            name={`JOHN EDISON`}
             title={`My grades are on the rise`}
             imageUrl={`/images/image3.jpg`}
             body={`I love the way am performing right now. I love the way am performing right now.
