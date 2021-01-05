@@ -1,15 +1,43 @@
 import React from "react";
+import Arrow from "../../components/arrow/arrow";
+import Slider from "../../components/slider/slider";
 import Testimonials from "../../components/testimonials/testimonials";
 import VideoBackground from "../../components/video-background/video-background";
 import "./homepage.scss";
 
 
 
+
+
+
+
 const Homepage = () => {
+
+  const imageUrls = [`/images/image1.jpg`,`/images/image2.jpg`,`/images/image3.jpg`];
+
   return (
     <div className="homepage-container">
       <div className="banner">
-      <VideoBackground />
+
+       <Slider urls={imageUrls}/>
+       
+      
+          
+                {/* <VideoBackground /> */}
+              
+              {/* <img src="/images/image1.jpg" className=""/>
+              
+              
+              <img src="/images/image2.jpg" className=""/>
+              
+              
+              <img src="/images/image3.jpg" className=""/>
+              
+              
+              <img src="/images/image4.png" className=""/>              */}
+          
+      
+      
 
         {/* <div className="profile-image"></div> */}
         {/* <div className="profile-text">Software Developer</div> */}
