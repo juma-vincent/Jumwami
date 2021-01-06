@@ -13,7 +13,7 @@ import "./homepage.scss";
 
 const Homepage = () => {
 
-  const imageUrls = [`/images/img1.jpg`,`/images/img2.jpg`,`/images/img3.jpg`, `/images/img4.jpg`,`/images/img5.jpg`];
+  const imageUrls = [`https://i.imgur.com/S1BPk39.jpg`,`https://i.imgur.com/0MZZL10.jpg`,`https://i.imgur.com/c1Cmuuj.jpg`, `/images/img4.jpg`,`/images/img5.jpg`];
 
   return (
     <div className="homepage-container">
