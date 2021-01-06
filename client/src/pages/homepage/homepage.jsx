@@ -19,11 +19,11 @@ const Homepage = () => {
     <div className="homepage-container">
       <div className="banner">
 
-       <Slider autoPlay={3} urls={imageUrls}/>
+       {/* <Slider autoPlay={3} urls={imageUrls}/> */}
        
       
           
-                {/* <VideoBackground /> */}
+                <VideoBackground />
               
               {/* <img src="/images/image1.jpg" className=""/>
               
