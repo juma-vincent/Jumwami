@@ -1,14 +1,15 @@
 
 import React from 'react'
-import{ css, jsx } from '@emotion/react';
-import './slide.scss';
+import { SlideImageContainer } from './slide.styled'
+
 
 const Slide = ({ imageUrl }) => (
     
 
-  <div >      
-      <img src={imageUrl} className='slide-image' alt="slide"/>
-  </div>
+  <SlideImageContainer imageUrl= {imageUrl} >      
+      
+      {/* <img src={imageUrl} className='slide-image' alt="slide"/> */}
+  </SlideImageContainer>
 )
 
 export default Slide

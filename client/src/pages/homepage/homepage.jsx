@@ -19,7 +19,7 @@ const Homepage = () => {
     <div className="homepage-container">
       <div className="banner">
 
-       <Slider urls={imageUrls}/>
+       <Slider autoPlay={5} urls={imageUrls}/>
        
       
           
