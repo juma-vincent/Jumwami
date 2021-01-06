@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const SlideImageContainer= styled.div`
-      height: 70vh; 
+      height: 75vh; 
       width: 100vw;         
       background-size: cover;
       object-fit: cover;

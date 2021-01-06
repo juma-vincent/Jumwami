@@ -13,13 +13,13 @@ import "./homepage.scss";
 
 const Homepage = () => {
 
-  const imageUrls = [`/images/image1.jpg`,`/images/image2.jpg`,`/images/image3.jpg`];
+  const imageUrls = [`/images/img1.jpg`,`/images/img2.jpg`,`/images/img3.jpg`, `/images/img4.jpg`,`/images/img5.jpg`];
 
   return (
     <div className="homepage-container">
       <div className="banner">
 
-       <Slider autoPlay={5} urls={imageUrls}/>
+       <Slider autoPlay={3} urls={imageUrls}/>
        
       
           
