@@ -18,6 +18,4 @@ const SliderContent = ({translate, transition, width, urls })=>
 
   </SliderContentContainer>
 
-
-
 export default SliderContent;

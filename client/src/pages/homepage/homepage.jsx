@@ -1,5 +1,6 @@
 import React from "react";
 import Arrow from "../../components/arrow/arrow";
+import ImageSlider from "../../components/refined-image-slider/refined-image-slider";
 import Slider from "../../components/slider/slider";
 import Testimonials from "../../components/testimonials/testimonials";
 import VideoBackground from "../../components/video-background/video-background";
@@ -12,9 +13,7 @@ import "./homepage.scss";
 
 
 const Homepage = () => {
-
-  const imageUrls = [`https://i.imgur.com/S1BPk39.jpg`,`https://i.imgur.com/0MZZL10.jpg`,`https://i.imgur.com/c1Cmuuj.jpg`, `/images/img4.jpg`,`/images/img5.jpg`];
-
+  
   return (
     <div className="homepage-container">
       <div className="banner">
@@ -23,7 +22,9 @@ const Homepage = () => {
        
       
           
-                <VideoBackground />
+                {/* <VideoBackground /> */}
+                <ImageSlider/> 
+
               
               {/* <img src="/images/image1.jpg" className=""/>
               
