@@ -19,13 +19,13 @@ export const ImageWrapper = styled.div`
 
     }
     .active{
-        opacity: 0;
-        transition-duration: 1s ;
+        opacity: 1;
+        transition-duration: 0.1s ease-in-out;
     }
 
     .inactive {
          opacity: 0;
-         transition-duration: 1s ease;
+         transition-duration: 0.1s ease;
     }
     
 `;

@@ -9,6 +9,8 @@ import "./homepage.scss";
 
 
 
+const imageUrls = [`/images/img1.jpg`,`/images/img2.jpg`,
+`/images/img3.jpg`,`/images/img4.jpg`,`/images/img5.jpg`];
 
 
 
@@ -17,6 +19,7 @@ const Homepage = () => {
   return (
     <div className="homepage-container">
       <div className="banner">
+
 
        {/* <Slider autoPlay={3} urls={imageUrls}/> */}
        

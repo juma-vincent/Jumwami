@@ -8,7 +8,9 @@ const Slide = ({ imageUrl }) => (
 
   <SlideImageContainer imageUrl= {imageUrl} >      
       
-      {/* <img src={imageUrl} className='slide-image' alt="slide"/> */}
+      
+         {/* <img src={`/images/img2.jpg`} className='slide-image' alt="slide"/> */}
+     
   </SlideImageContainer>
 )
 

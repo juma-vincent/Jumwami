@@ -9,6 +9,7 @@ import { SliderContainer } from './slider.styled';
 const getWidth = () => window.innerWidth
 
 
+
 const Slider = ({urls, autoPlay}) => {
   
 
