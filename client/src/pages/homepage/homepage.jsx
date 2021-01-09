@@ -1,6 +1,7 @@
 import React from "react";
 import Arrow from "../../components/arrow/arrow";
 import ImageSlider from "../../components/refined-image-slider/refined-image-slider";
+import NewSlider from "../../components/refined-image-slider/slider-refined";
 import Slider from "../../components/slider/slider";
 import Testimonials from "../../components/testimonials/testimonials";
 import VideoBackground from "../../components/video-background/video-background";
@@ -19,14 +20,14 @@ const Homepage = () => {
   return (
     <div className="homepage-container">
       <div className="banner">
-
+      <NewSlider/>
 
        {/* <Slider autoPlay={3} urls={imageUrls}/> */}
        
       
           
                 {/* <VideoBackground /> */}
-                <ImageSlider/> 
+                {/* <ImageSlider/>  */}
 
               
               {/* <img src="/images/image1.jpg" className=""/>

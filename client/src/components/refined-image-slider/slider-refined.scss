@@ -1,0 +1,46 @@
+.slider{
+    
+    width: 100%;
+    height: 70vh;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+
+}
+.image{
+    width:100%;
+    height:70vh;
+    background-size:cover;
+    overflow: hidden;
+    
+}
+
+.slide{    
+    min-width: 100%;
+    height: 100%;
+    transition: .03s ease-in-out;
+    overflow: hidden;
+}
+%btn-styles{
+ position: absolute; 
+ top: 50%;
+ transform: translateY(-50%);
+ width: 10%;
+ height: 80%;
+ background: none;
+}
+
+#goLeft{
+ left: 0;
+ @extend %btn-styles;
+}
+
+#goRight{    
+ right: 0;
+ @extend %btn-styles ;  
+}

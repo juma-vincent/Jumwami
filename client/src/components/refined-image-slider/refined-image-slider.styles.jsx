@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ImageSliderContainer = styled.div`
-display: flex;      
+display:flex;    
 height: 75vh; 
 width: 100vw;  
     
@@ -16,12 +16,14 @@ export const ImageWrapper = styled.div`
         object-fit: cover;
         background-repeat: no-repeat;
         background-position: center;   
+        opacity: 0;
 
+        .active{
+            opacity: 1;
+            transition-duration: 0.1s ease-in-out;
+        }
     }
-    .active{
-        opacity: 1;
-        transition-duration: 0.1s ease-in-out;
-    }
+    
 
     .inactive {
          opacity: 0;
