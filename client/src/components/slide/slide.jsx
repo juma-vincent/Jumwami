@@ -1,17 +1,22 @@
 
-import React from 'react'
-import { SlideImageContainer } from './slide.styled'
+import React from 'react';
+import {  TextAndButtonContainer, ImageWrapper } from './slide.styled';
 
 
-const Slide = ({ imageUrl }) => (
+
+const Slide = ({ imageUrl, title, subtitle, buttonText, x }) => {
     
+  return(
+    <ImageWrapper imageUrl={imageUrl} style={{transform:`translateX(${x}%)`}}>
+      <TextAndButtonContainer>
+        <h1>{title}</h1>
+        <p>{subtitle}</p>
+        {buttonText? <button>{buttonText}</button>: null }
+      </TextAndButtonContainer>
 
-  <SlideImageContainer imageUrl= {imageUrl} >      
-      
-      
-         {/* <img src={`/images/img2.jpg`} className='slide-image' alt="slide"/> */}
-     
-  </SlideImageContainer>
-)
+    </ImageWrapper>
+  );
+  
+  }
 
 export default Slide

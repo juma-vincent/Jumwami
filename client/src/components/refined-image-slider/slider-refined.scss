@@ -1,29 +1,30 @@
-.slider{
-    
-    width: 100%;
-    height: 70vh;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
+// .slider{    
+//     width: 100vw;
+//     height: 70vh;
+//     box-sizing: border-box;
+//     margin: 0 auto;
+//     display: flex;    
+//     position: relative;
+//     overflow: hidden;
+//     border: solid red 2px;
 
 
-}
+// }
 .image{
-    width:100%;
+    width:100vw;
     height:70vh;
-    background-size:cover;
+    background-size:cover;    
+    object-fit: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     overflow: hidden;
     
 }
 
 .slide{    
-    min-width: 100%;
-    height: 100%;
-    transition: .03s ease-in-out;
+    min-width: 100vw;
+    height: 70vh;
+    transition: .2.5s ease-in-out ;
     overflow: hidden;
 }
 %btn-styles{

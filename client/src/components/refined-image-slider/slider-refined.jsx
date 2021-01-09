@@ -1,38 +1,82 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Arrow from '../arrow/arrow';
-import './slider-refined.scss'
+import Slide from '../slide/slide';
+import './slider-refined.scss';
+import { ImageSliderContainer, ImageWrapper } from './slider-refined.styles';
 
-const imageUrls = [`/images/img1.jpg`,`/images/img2.jpg`,
-`/images/img3.jpg`,`/images/img4.jpg`,`/images/img5.jpg`];
+const bannerData=[{title:'QUALITY WORK GUARANTEED', 
+subtitle:'Get an excellent learning experience with us.', 
+buttonText:'SEE TESTIMONIALS',
+imageUrl:'/images/img1.jpg'},
+{title:'TRY OUR SERVICES', 
+subtitle:'We offer 3 days free trial.', 
+buttonText:'TRY NOW',
+imageUrl:'/images/img2.jpg'},
+{title:'', 
+subtitle:'', 
+buttonText:'',
+imageUrl:'/images/img3.jpg'},
+{title:'', 
+subtitle:'', 
+buttonText:'',
+imageUrl:'/images/img4.jpg'},
+{title:'OUR CLIENTS ARE HAPPY', 
+subtitle:'', 
+buttonText:'',
+imageUrl:'/images/img5.jpg'},
 
-const NewSlider = () => {
+]
+
+
+
+const NewSlider = ({autoPlay}) => {
     const [x, setX] = useState(0);
 
+    const autoPlayRef = useRef();
+
+    useEffect(()=>{
+        autoPlayRef.current= goRight;
+    })
+
+    useEffect(()=>{
+        const play = ()=>{
+          autoPlayRef.current()
+        }
+        if(autoPlay){
+          const interval = setInterval(play, autoPlay* 1000);
+          return ()=> clearInterval(interval)
+        }
+        
+      },[])
+
     const goLeft= ()=>{
-        x === 0? setX(-100*(imageUrls.length -1)) : setX(x+100);
-        // setX(x+100)
+        x === 0? setX(-100*(bannerData.length -1)) : setX(x+100);
+        
         console.log(x)
     }
 
     const goRight= ()=>{
-        (x === -100*(imageUrls.length -1))? setX(0) : setX(x-100);
+        (x === -100*(bannerData.length -1))? setX(0) : setX(x-100);
         console.log(x)
     }
 
     return (
-        <div className='slider'>
-            {imageUrls.map((imageUrl, index)=> 
-                
-                    <div key={imageUrl} className='slide' style={{transform:`translateX(${x}%)`}}>
-                        <img src={imageUrl} alt="slide" className='image'/>
-                    </div>
+        <ImageSliderContainer>
+            {bannerData.map(({imageUrl, title, subtitle, buttonText })=> 
+                    
+                       
+                    <Slide key={imageUrl}
+                    x={x}
+                    imageUrl={imageUrl} 
+                    title={title} 
+                    subtitle={subtitle} 
+                    buttonText={buttonText}/>
                 )
             }
             <Arrow direction='left' handleClick={goLeft}/>
             <Arrow direction='right' handleClick={goRight}/>
-            {/* <button id='goLeft' onClick={goLeft}>left</button>
-            <button id='goRight' onClick={goRight}>right</button> */}
-        </div>
+            
+        </ImageSliderContainer>
       );
 }
  

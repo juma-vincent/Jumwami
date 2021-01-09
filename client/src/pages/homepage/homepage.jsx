@@ -20,7 +20,7 @@ const Homepage = () => {
   return (
     <div className="homepage-container">
       <div className="banner">
-      <NewSlider/>
+      <NewSlider autoPlay={5}/>
 
        {/* <Slider autoPlay={3} urls={imageUrls}/> */}
        

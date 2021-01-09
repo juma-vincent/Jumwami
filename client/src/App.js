@@ -4,6 +4,7 @@ import Footer from './components/footer/footer';
 import Header from './components/header/header';
 import Homepage from './pages/homepage/homepage';
 
+
 class App extends React.Component {
 
   componentDidMount(){
@@ -15,8 +16,9 @@ class App extends React.Component {
       <div className="App">
         
         <Header/>
-        <Homepage/>   
+        <Homepage/>          
         <Footer/>    
+        
         
       
       </div>

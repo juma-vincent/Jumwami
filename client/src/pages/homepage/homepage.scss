@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     background-color: whitesmoke;
+    position: relative;
     .banner {
       position: relative;
       // background-image: linear-gradient(to right bottom, #070706f5, #26e20d2f),
@@ -9,6 +10,8 @@
       // background-size: cover;      
       // height: 70vh;
       color: #ec9819a8;    
+      overflow: hidden;
+      
       
       
 

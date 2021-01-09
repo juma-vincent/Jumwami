@@ -1,18 +1,60 @@
 import styled from 'styled-components'
 
-export const SlideImageContainer= styled.div`
-      height: 75vh; 
-      width: 100vw;         
-      background-size: cover;
-      object-fit: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      overflow: hidden;
-
-      background-image: linear-gradient(
+export const ImageWrapper = styled.div` 
+    min-width: 100vw;
+    height: 70vh;
+    transition: .2.5s ease-in-out ;
+    overflow: hidden;      
+       
+        
+    background-size: cover;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;   
+    background-image: linear-gradient(
             rgba(21, 28, 58, 0.38),
             rgba(21, 28, 58, 0.68)
-          ),
-          url(${props=> props.imageUrl});
-      
+            ),
+            url(${props=> props.imageUrl});    
+    
+    overflow: hidden;
+    
+    
 `;
+
+export const TextAndButtonContainer = styled.div`
+      position: absolute;
+      top: 10%;
+      left: 25%;
+      
+      
+
+      h1{
+            font-weight:bold;
+            color: white;
+            text-align: start;
+      }
+      p{
+            font-size:20px;
+            color: white;
+            text-align: start;
+            
+      }
+
+      button{
+        margin: 10px; 
+        padding: 10px;
+        border-radius: 2px;
+        background: rgba(21, 28, 58, 0.78);
+        outline: none;
+        color: white;
+        border: rgba(21, 28, 58, 0.38);
+        cursor: pointer;
+        font-family: Yu Gothic UI;
+
+      }
+
+      
+
+`;
+
