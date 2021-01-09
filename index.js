@@ -6,8 +6,9 @@ const app= express();
 
 if(process.env.NODE_ENV === 'production'){
     //Express will serve up production assets like our main.js or main.css
-    // app.use(express.static('client/build'));
-    app.use(express.static(__dirname + '/public'));
+    app.use(express.static('client/build'));
+    
+    
 
     //Express will serve up the index.html file if it doesn't recognize the route
     const path = require('path');
