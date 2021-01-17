@@ -2,6 +2,7 @@ import React from "react";
 import Arrow from "../../components/arrow/arrow";
 import ImageSlider from "../../components/refined-image-slider/refined-image-slider";
 import NewSlider from "../../components/refined-image-slider/slider-refined";
+import Services from "../../components/services/services";
 import Slider from "../../components/slider/slider";
 import Testimonials from "../../components/testimonials/testimonials";
 import VideoBackground from "../../components/video-background/video-background";
@@ -51,7 +52,7 @@ const Homepage = () => {
       <div className="main-section">
         
 
-        <div className="about-container">
+        <div id='about' className="about-container">
           <div className="title">ABOUT ME</div>
           <div className="content">
               <div > <img src="/images/image1.jpg" className="image-container" alt=""/></div>
@@ -67,6 +68,7 @@ const Homepage = () => {
                 </div>
             </div>
         </div>
+        <Services/>
 
         <div>
             <h1 style={{color: 'green', textAlign: 'center'}}>Testimonials</h1>

@@ -3,7 +3,7 @@ import "./footer.scss";
 
 const Footer = () => {
   return (
-    <div className="footer-container">
+    <div id='contact' className="footer-container">
       <div className="background-container"></div>
       <h4 className="title"> Contact Information</h4>
       <small> Email: julius@gmail.com </small> <br />

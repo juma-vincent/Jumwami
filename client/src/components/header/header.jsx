@@ -2,6 +2,8 @@ import React from "react";
 import "./header.scss";
 import {Link} from 'react-router-dom';
 import Option from "../option/option";
+import CustomLink from "../custom-link/custom-link";
+
 
 const Header = () => {
   return (
@@ -15,13 +17,13 @@ const Header = () => {
       <div className="subheader-wrapper">
           <div className='upper-subheader'>
               <div className="options-container">
-              <Link to="/" >
-              <Option text='HOME'/>
+              <Link to='/'  >
+              <Option text='HOME'/> 
               </Link>
-              <Link to="/services" >
+              <CustomLink text='services'  >
               <Option text='SERVICES'/>
-              </Link>
-              <Link to="/projects" >
+              </CustomLink>
+              <Link  to='/projects'   >
               <Option text='PROJECTS'/>
               </Link>
               
@@ -31,12 +33,12 @@ const Header = () => {
       
           <div className='lower-subheader'>
               <div className="options-container " style={{backgroundColor:'rgb(26, 25, 25) '}}>
-              <Link>
+              <CustomLink text='about'>
               <Option text='ABOUT US'/>
-              </Link>
-              <Link to="/" >
+              </CustomLink>
+              <CustomLink text='contact' >
               <Option text='CONTACT US'/>
-              </Link>
+              </CustomLink>
               </div>
           </div>
       </div>
