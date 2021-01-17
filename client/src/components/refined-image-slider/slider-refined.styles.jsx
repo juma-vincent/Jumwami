@@ -13,23 +13,23 @@ export const ImageSliderContainer = styled.div`
 
 `;
 
-export const ImageWrapper = styled.div` 
-    min-width: 100vw;
-    height: 70vh;
-    transition: .2.5s ease-in-out ;
-    overflow: hidden;       
+// export const ImageWrapper = styled.div` 
+//     min-width: 100vw;
+//     height: 70vh;
+//     transition: .2.5s ease-in-out ;
+//     overflow: hidden;       
         
-    background-size: cover;
-    object-fit: cover;
-    background-repeat: no-repeat;
-    background-position: center;   
-    background-image: linear-gradient(
-            rgba(21, 28, 58, 0.38),
-            rgba(21, 28, 58, 0.68)
-            ),
-            url(${props=> props.imageUrl});    
+//     background-size: cover;
+//     object-fit: cover;
+//     background-repeat: no-repeat;
+//     background-position: center;   
+//     background-image: linear-gradient(
+//             rgba(21, 28, 58, 0.38),
+//             rgba(21, 28, 58, 0.68)
+//             ),
+//             url(${props=> props.imageUrl});    
     
-    overflow: hidden;
+//     overflow: hidden;
     
     
-`;
+// `;

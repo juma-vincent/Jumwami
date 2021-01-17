@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import Arrow from '../arrow/arrow';
 import Slide from '../slide/slide';
 import './slider-refined.scss';
-import { ImageSliderContainer, ImageWrapper } from './slider-refined.styles';
+import { ImageSliderContainer} from './slider-refined.styles';
 
 const bannerData=[{title:'QUALITY WORK GUARANTEED', 
 subtitle:'Get an excellent learning experience with us.', 

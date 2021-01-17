@@ -1,7 +1,7 @@
 
 import React from 'react'
-import leftArrow from '../../assets/left-arrow.svg'
-import rightArrow from '../../assets/right-arrow.svg'
+import leftArrow from '../../assets/left-arrow1.svg'
+import rightArrow from '../../assets/right-arrow1.svg'
 import {ArrowContainer} from './arrow.styled';
 
 const Arrow = ({ direction='left', handleClick }) => (

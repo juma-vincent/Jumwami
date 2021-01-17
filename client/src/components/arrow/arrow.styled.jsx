@@ -18,7 +18,7 @@ export const ArrowContainer = styled.div`
       height: 50px;
       width: 50px;
       justify-content: center;
-      background: transparent;      
+      background: rgba(116, 124, 116, 0.58);      
       border-radius: 50%;
       cursor: pointer;
       align-items: center;

@@ -17,7 +17,7 @@ export const ImageWrapper = styled.div`
             ),
             url(${props=> props.imageUrl});    
     
-    overflow: hidden;
+    
     
     
 `;
@@ -33,6 +33,7 @@ export const TextAndButtonContainer = styled.div`
             font-weight:bold;
             color: white;
             text-align: start;
+            text-shadow: 2px 2px rgba(21, 28, 58, 0.28) ;
       }
       p{
             font-size:20px;
