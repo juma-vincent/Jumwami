@@ -4,38 +4,74 @@
     // background: transparentize($color: #000000, $amount: 0);
     background-color: white;    
 
-    .logo-box {
-      padding: 5px;
-      height: 70px;
-      // width: 200px;
-      width: 17%;
-      @media screen and (max-width: 800px) {
-        margin-bottom: 20px;
-        width: 27%;
-      }
-      @media screen and (max-width: 400px) {
-        margin-top: 6.5px;
-        width: 47%;
-      }
-    }
-    .options-container {
-      width: 80%;
-      display: flex;
-      justify-content: center;
+        .logo-box {
+          padding: 5px;
+          height: 90px;
+          
+          
+          // width: 200px;
+          width: 17%;
+          @media screen and (max-width: 800px) {
+            margin-bottom: 20px;
+            width: 27%;
+          }
+          @media screen and (max-width: 400px) {
+            margin-top: 6.5px;
+            width: 47%;
+          }
+        }
 
-      .option {
-        margin: 20px 10px;
-        height: 25px;
-        text-align: center;
-        font-size: 17px;
-        text-decoration: none;
-        color: black;
-        cursor: pointer;
-        box-shadow: 0px 3px 4px rgba(63, 46, 46, 0.1);
-        padding: 5px 8px;       
-        
-        
-      }
-    }
+        .subheader-wrapper{
+          width: 83%;          
+          
+          display: flex;
+          flex-direction: column;
+
+              .upper-subheader{
+                display: flex;
+                justify-content: flex-end;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+                border-left: olive 1px solid;
+                border-top: olive solid 1px;
+                // border-bottom: black solid 3px;
+                height: 42px;
+                background-color: olive;
+          
+              }    
+          
+              .lower-subheader{                
+                display: flex;
+                justify-content: flex-end;
+                border-top:rgb(26, 25, 25) solid 1px;
+                border-bottom:rgb(26, 25, 25) solid 1px;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+                border-left:rgb(26, 25, 25)  1px solid;
+                border-top:rgb(26, 25, 25)  solid 1px;
+                height: 44px;
+                background-color:rgb(26, 25, 25) ;
+              }
+          
+          
+          
+              .options-container {
+                border-top: white solid 3px;                
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px; 
+                align-items: center;               
+                margin: 4px;
+                margin-right: -5px;
+                padding: 0 20px;
+                width: 99.4%;
+                display: flex;
+                justify-content: flex-end;
+                z-index: 2;
+                background-color: olive;
+                
+          
+              
+              }
+        }
   }
   
