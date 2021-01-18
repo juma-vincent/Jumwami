@@ -9,9 +9,8 @@ const Header = () => {
   return (
     <div className="header-container">
 
-      <div className="logo-box">
-        <h1 style={{color:'grey', fontFamily: 'Times New Roman'}}> Jumwami</h1> 
-        {/* <img src="/images/logo.png" alt="" /> */}
+      <div className="logo-box">        
+        <img src="/images/jumwami-logo.png" className='logo' alt="" />
       </div>
 
       <div className="subheader-wrapper">

@@ -6,9 +6,9 @@ const Footer = () => {
     <div id='contact' className="footer-container">
       <div className="background-container"></div>
       <h4 className="title"> Contact Information</h4>
-      <small> Email: julius@gmail.com </small> <br />
+      <small> Email: juliusmiriami@gmail.com </small> <br />
       <small>Phone: +254700000000</small> <br />
-      <small>&copy; 2020 Jumwami . All rights reserved.</small>
+      <small>&copy; 2021 Jumwami . All rights reserved.</small>
     </div>
   );
 };
