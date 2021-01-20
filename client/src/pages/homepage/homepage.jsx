@@ -1,13 +1,8 @@
 import React from "react";
-import Arrow from "../../components/arrow/arrow";
-import ImageSlider from "../../components/refined-image-slider/refined-image-slider";
-import NewSlider from "../../components/refined-image-slider/slider-refined";
 import Services from "../../components/services/services";
 import Slider from "../../components/slider/slider";
 import Testimonials from "../../components/testimonials/testimonials";
-import VideoBackground from "../../components/video-background/video-background";
 import "./homepage.scss";
-
 
 
 
@@ -21,32 +16,10 @@ const Homepage = () => {
   return (
     <div className="homepage-container">
       <div className="banner">
-      <NewSlider autoPlay={5}/>
-
-       {/* <Slider autoPlay={3} urls={imageUrls}/> */}
-       
-      
-          
-                {/* <VideoBackground /> */}
-                {/* <ImageSlider/>  */}
-
-              
-              {/* <img src="/images/image1.jpg" className=""/>
-              
-              
-              <img src="/images/image2.jpg" className=""/>
-              
-              
-              <img src="/images/image3.jpg" className=""/>
-              
-              
-              <img src="/images/image4.png" className=""/>              */}
-          
+      <Slider autoPlay={5}/>                  
       
       
 
-        {/* <div className="profile-image"></div> */}
-        {/* <div className="profile-text">Software Developer</div> */}
       </div>
 
       <div className="main-section">

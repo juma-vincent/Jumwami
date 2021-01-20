@@ -1,0 +1,23 @@
+.projects-container{
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    margin: 10px auto;
+
+            .project1{
+                box-shadow: 0 3px 4px rgba(41, 40, 34, 0.419);
+                margin: 10px 0;
+                height: 190px;
+
+            }
+            .project2{
+                box-shadow: 0 3px 4px rgba(41, 40, 34, 0.419);
+                margin: 10px 0;
+                height: 190px;
+            }
+            .project3{
+                box-shadow: 0 3px 4px rgba(41, 40, 34, 0.419);
+                margin: 10px 0;
+                height: 190px;
+            }
+}

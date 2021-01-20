@@ -1,102 +1,85 @@
-
-import React, { useState, useRef, useEffect } from 'react'
-import SliderContent from '../slider-content/slider-content';
+import React, { useState, useRef, useEffect } from 'react';
 import Arrow from '../arrow/arrow';
 import Dots from '../dots/dots';
-import { SliderContainer } from './slider.styled';
+import Slide from '../slide/slide';
+import './slider.scss';
+import { ImageSliderContainer} from './slider.styles';
+
+const bannerData=[{title:'QUALITY WORK GUARANTEED', 
+subtitle:'Get an excellent learning experience with us.', 
+buttonText:'SEE TESTIMONIALS',
+imageUrl:'/images/img1.jpg'},
+{title:'TRY OUR SERVICES', 
+subtitle:'We offer 3 days free trial.', 
+buttonText:'TRY NOW',
+imageUrl:'/images/img2.jpg'},
+{title:'', 
+subtitle:'', 
+buttonText:'',
+imageUrl:'/images/img3.jpg'},
+{title:'', 
+subtitle:'', 
+buttonText:'',
+imageUrl:'/images/img4.jpg'},
+{title:'OUR CLIENTS ARE HAPPY', 
+subtitle:'', 
+buttonText:'',
+imageUrl:'/images/img5.jpg'},
+
+]
 
 
-const getWidth = () => window.innerWidth
 
+const Slider = ({autoPlay}) => {
+    const [x, setX] = useState(0);
 
+    const autoPlayRef = useRef();
 
-const Slider = ({urls, autoPlay}) => {
-  
-
-  const [state, setState] = useState({
-    activeIndex: 0,
-    translate: 0,
-    transition: 0.45,
-    
-    
-  })
-
-  const { translate, transition, activeIndex } = state
-  const autoPlayRef = useRef();
-
-  useEffect(()=>{
-    autoPlayRef.current= nextSlide
-  })
-
-  useEffect(()=>{
-    const play = ()=>{
-      autoPlayRef.current()
-    }
-    if(autoPlay){
-      const interval = setInterval(play, autoPlay* 1000);
-      return ()=> clearInterval(interval)
-    }
-    
-  },[])
-
-  const nextSlide = ()=>{
-    if (activeIndex === urls.length - 1) {
-      return setState({
-        ...state,
-        translate: 0,
-        activeIndex: 0
-      })
-    }
-
-    setState({
-      ...state,
-      activeIndex: activeIndex + 1,
-      translate: (activeIndex + 1) * getWidth()
+    useEffect(()=>{
+        autoPlayRef.current= goRight;
     })
 
-  }
+    useEffect(()=>{
+        const play = ()=>{
+          autoPlayRef.current()
+        }
+        if(autoPlay){
+          const interval = setInterval(play, autoPlay* 1000);
+          return ()=> clearInterval(interval)
+        }
+        
+      },[])
 
-  const previousSlide = ()=>{
-    if (activeIndex === 0) {
-      return setState({
-        ...state,
-        translate: (urls.length - 1) * getWidth(),
-        activeIndex: urls.length - 1
-      })
+    const goLeft= ()=>{
+        x === 0? setX(-100*(bannerData.length -1)) : setX(x+100);
+        
+        
     }
 
-    setState({
-      ...state,
-      activeIndex: activeIndex - 1,
-      translate: (activeIndex - 1) * getWidth()
-    })
+    const goRight= ()=>{
+        (x === -100*(bannerData.length -1))? setX(0) : setX(x-100);
+        
     }
 
-  return (
-    <SliderContainer>
-          <SliderContent
-            translate={translate}
-            transition={transition}
-            width={getWidth()* urls.length}
-            urls={urls}
-            />
-
+    return (
+        <ImageSliderContainer>
+            {bannerData.map(({imageUrl, title, subtitle, buttonText })=> 
+                    
+                       
+                    <Slide key={imageUrl}
+                    x={x}
+                    imageUrl={imageUrl} 
+                    title={title} 
+                    subtitle={subtitle} 
+                    buttonText={buttonText}/>
+                )
+            }
+            <Arrow direction='left' handleClick={goLeft}/>
+            <Arrow direction='right' handleClick={goRight}/>
+            <Dots activeIndex={x} arraydata={bannerData}/>
             
-            <Arrow direction='left' handleClick={previousSlide}/>
-            <Arrow direction='right' handleClick={nextSlide}/>
-                
-            
-            
-              
-          
-          <Dots activeIndex={activeIndex} urls={urls}/>
-
-      
-      
-      
-    </SliderContainer>
-  )
+        </ImageSliderContainer>
+      );
 }
-
-
-export default Slider
+ 
+export default Slider;

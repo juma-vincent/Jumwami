@@ -18,45 +18,7 @@
       @media screen and (max-width: 800px) {
       }
   
-      .profile-image {
-        width: 270px;
-        height: 270px;        
-        background-size: cover;
-        border: none;
-        display: block;
-        position: absolute;
-        top: 60px;
-        left: 530px;
-  
-        @media screen and (max-width: 800px) {
-          width: 170px;
-          height: 170px;
-          top: 5px;
-          left: 240px;
-        }
-        @media screen and (max-width: 400px) {
-          top: 60px;
-          left: 90px;
-        }
-      }
-      .profile-text {
-        font-size: 27px;
-        font-weight: 700;
-        color: white;
-        position: absolute;
-        top: 322px;
-        left: 552px;
-        @media screen and (max-width: 800px) {
-          top: 170px;
-          left: 230px;
-          font-size: 20px;
-          font-weight: 600;
-        }
-        @media screen and (max-width: 400px) {
-          top: 225px;
-          left: 87px;
-        }
-      }
+      
     }
   
     .main-section {

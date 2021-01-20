@@ -27,6 +27,7 @@
                 border-radius: 90%; 
                 transform: skewX(12deg);
                 transform:  scale(0.6) skew(12deg);
+                object-fit: cover;
             }
             
             
@@ -34,7 +35,7 @@
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                transform: translate(-30%, 200%);
+                transform: translate(-50%, 200%);
                 opacity: 0;
                 transition: all .6s;
                 backface-visibility: hidden;
@@ -50,14 +51,14 @@
         &:hover  {             
             .testimonial-name{
                 opacity: 1;
-                transform: translate(-30%, -30%);                
+                transform: translate(-50%, -50%);                
             }
         }
 
         &:hover  {                   
             .testimonial-image{
                 transform: scale(0.5) skew(12deg);    
-                filter: blur(1.7px) brightness(90%);                          
+                filter: blur(1.7px) brightness(80%);                          
                 
             }
         }

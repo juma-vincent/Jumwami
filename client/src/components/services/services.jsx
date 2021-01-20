@@ -1,14 +1,27 @@
 import React from 'react';
+import './services.scss';
 
 const Services = () => {
     return ( 
         <div id='services'> 
-            This is Services.This is Services.This is Services.
-            This is Services.This is Services.This is Services.
-            This is Services.This is Services.This is Services.
-            This is Services.This is Services.This is Services.
-            This is Services.This is Services.This is Services.
-            This is Services.This is Services.This is Services.
+           <h2>Services Offered</h2>
+           <div id='services-content'>
+            We offer academic writing services, tutoring services.
+            We offer academic writing services, tutoring services.
+            We offer academic writing services, tutoring services.
+            We offer academic writing services, tutoring services.
+            We offer academic writing services, tutoring services.
+            We offer academic writing services, tutoring services.
+            We offer academic writing services, tutoring services.
+            We offer academic writing services, tutoring services.
+            We offer academic writing services, tutoring services.
+            We offer academic writing services, tutoring services.
+            We offer academic writing services, tutoring services.
+            We offer academic writing services, tutoring services.
+            We offer academic writing services, tutoring services.
+
+
+           </div>
         </div>
      );
 }

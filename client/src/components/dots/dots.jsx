@@ -9,12 +9,12 @@ const Dot = ({ active }) => (
   />
 )
 
-const Dots = ({ urls, activeIndex }) => (
+const Dots = ({ arraydata, activeIndex }) => (
   <DotsContainer
     
   >
-    {urls.map((url, i) => (
-      <Dot key={url} active={activeIndex === i} />
+    {arraydata.map((data, i) => (
+      <Dot key={data.imageUrl} active={activeIndex === i*-100} />
     ))}
   </DotsContainer>
 )

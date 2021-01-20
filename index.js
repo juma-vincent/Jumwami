@@ -1,23 +1,39 @@
 const express = require('express');
-const passport = require('passport');
+const mongoose = require('mongoose');
 const keys = require('./config/keys');
-const GoogleStrategy = require('passport-google-oauth20').Strategy;
+const cookieSession = require('cookie-session'); // gives express access to cookies
+const passport = require('passport');// to tell passport to use the cookies we installed above.
+
+require('./models/User');
+require('./services/passport');
+
+
+mongoose.connect(keys.mongoURI);
 
 const app= express();
 
-passport.use(
-    new GoogleStrategy({
-        clientID: keys.googleClientID,
-        clientSecret: keys.googleClientSecret,
-        callbackURL: 'auth/google/callback'
-    }, (accessToken)=>{
-        console.log(accessToken);
-    } )
+
+
+app.use(
+    cookieSession({
+        maxAge: 30 * 24 * 60 * 60 * 1000, // lifespan of the cookie is 30 days, converted to miliseconds
+        keys: [keys.cookieKey] // this key allows us to encrypt our cookie.
+    })
 );
 
-app.get('/auth/google', passport.authenticate('google',{
-    scope: ['profile', 'email']
-}))
+app.use(passport.initialize());
+app.use(passport.session());
+
+
+
+require('./routes/authRoutes')(app);
+
+
+
+
+
+
+
 
 
 
