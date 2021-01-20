@@ -11,22 +11,23 @@
     cursor: pointer;
     transition: all 0.5s;
 
-    &:hover {
-    color: rgb(241, 243, 106);
-    box-shadow: 0 3px 4px rgba(247, 238, 116, 0.419);
-    animation: pulsate 1s;    
-    // border-color: rgb(241, 243, 106);
-    
-    }
+        &:hover {
+        color: rgb(241, 243, 106);
+        box-shadow: 0 3px 4px rgba(247, 238, 116, 0.419);
+        animation: pulsate 1s;    
+        // border-color: rgb(241, 243, 106);
+        
+        }
 
-    &:focus {
-    outline: none;
-    // animation: pulsate 1s;
-    border-color: rgb(241, 243, 106);
-    color: rgb(241, 243, 106);
-    // box-shadow: 0 5px 10px rgba(134, 106, 106, 0.25);
-    
-    }
+        &:focus {
+        outline: none;
+        // animation: pulsate 1s;
+        border-color: rgb(241, 243, 106);
+        color: rgb(241, 243, 106);
+        // box-shadow: 0 5px 10px rgba(134, 106, 106, 0.25);
+        
+        }
+        
 
     @media screen and (max-width: 800px) {                            
     margin: 0 2px;

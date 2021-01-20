@@ -8,7 +8,7 @@ module.exports = (app)=>{
     app.get('/auth/google/callback',
      passport.authenticate('google'),
      (req, res)=>{
-         res.redirect('http://localhost:3000/dashboard')
+         res.redirect('/dashboard')
         }
      );
 
@@ -20,7 +20,7 @@ module.exports = (app)=>{
 
     app.get('/api/logout', (req, res)=>{
         req.logout() // passport automatically sets logout property to req object. This kills all the associated cookies.
-        res.send(req.user) ;
+        res.redirect('/')
     });
 
 

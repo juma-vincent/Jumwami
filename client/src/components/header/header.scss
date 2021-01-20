@@ -58,6 +58,19 @@
                 border-top:rgb(26, 25, 25)  solid 1px;
                 height: 44px;
                 background-color:rgb(26, 25, 25) ;
+
+                .profile {                 
+                  z-index:  3;
+                  width: 150px;
+                  font-size: 14px;
+                  height: 23px;
+                  // background-color: rgb(205, 120, 50);
+                  color:white;
+                  @media screen and (max-width: 800px) {
+                    
+                    margin-right: 0px;
+                  }
+                }
               }
           
           

@@ -6,8 +6,8 @@ const Footer = () => {
     <div id='contact' className="footer-container">
       <div className="background-container"></div>
       <h4 className="title"> Contact Information</h4>
-      <small> Email: juliusmiriari@gmail.com </small> <br />
-      <small>Phone: +254700000000</small> <br />
+      <small> Email: juliasmiriari@gmail.com </small> <br />
+      <small>Phone: +254718718473</small> <br />
       <small>&copy; 2021 Jumwami . All rights reserved.</small>
     </div>
   );
