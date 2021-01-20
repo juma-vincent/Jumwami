@@ -11,7 +11,7 @@ import { withRouter } from 'react-router-dom';
 
 
 const renderProfile = (currentUser)=>{
-  console.log(currentUser)
+  
   return(
     <div className='profile'>
             {currentUser?(
@@ -81,7 +81,7 @@ const Header = ({currentUser, match}) => {
       
           <div className='lower-subheader'>
               <div className="options-container " style={{backgroundColor:'rgb(26, 25, 25) '}}>
-                
+
               {renderProfile(currentUser)}
 
               {match.isExact?
